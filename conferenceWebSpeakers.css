@@ -1,0 +1,363 @@
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.bookmark {
+  width: 50px;
+  height: 50px;
+}
+
+body {
+  background-color: #293f50;
+}
+
+.wrapper {
+  /*FUNCTION STARTS HERE*/
+  /*HEAD SECTION*/
+  /*START OF ABOUT SPEAKER*/
+  /*END OF ABOUT SPEAKER*/
+  /*START OF SPEAKERLIST*/
+}
+
+.wrapper .toplink {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.wrapper .header {
+  width: 80%;
+  margin: auto;
+  font-family: "Source Sans Pro", sans-serif;
+  color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 95px 95px;
+      grid-template-rows: 95px 95px;
+      grid-template-areas: "staffconference date" "staffconference navlist";
+}
+
+.wrapper .header .staffconference {
+  font-size: 40px;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: staffconference;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: normal;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.wrapper .header .date {
+  padding-right: 50px;
+  color: #648880;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: date;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: large;
+}
+
+.wrapper .header .navlist {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: navlist;
+  color: white;
+}
+
+.wrapper .header .navlist .linklist {
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.wrapper .header .navlist a {
+  color: white;
+  text-decoration: none;
+}
+
+.wrapper .header .navlist a:hover {
+  color: #648880;
+}
+
+.wrapper .part2 {
+  background: -webkit-gradient(linear, left top, right top, from(#85dabd), to(#f5eded));
+  background: linear-gradient(to right, #85dabd, #f5eded);
+  height: 200px;
+}
+
+.wrapper .part2 .intro {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.wrapper .part2 .intro h1 {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #648880;
+  font-size: 45px;
+  padding: 20px;
+}
+
+.wrapper .part2 .intro p {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: x-large;
+  font-weight: bold;
+  color: grey;
+}
+
+.wrapper .speakerslistwrap {
+  background-color: white;
+  padding-bottom: 20px;
+}
+
+.wrapper .speakerslistwrap .speakerslist {
+  padding-top: 30px;
+  width: 80%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrapper .speakerslistwrap .speakerslist .speaker {
+  padding-top: 30px;
+}
+
+.wrapper .speakerslistwrap .speakerslist .speakerimg {
+  float: right;
+  padding-right: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .speakerslistwrap .speakerslist .speakerimg a {
+  text-decoration: none;
+  color: #648880;
+  font-weight: bold;
+}
+
+.wrapper .speakerslistwrap .speakerslist .speakercontent {
+  width: 70%;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.wrapper .speakerslistwrap .speakerslist .speakercontent h1 {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #648880;
+  font-size: xx-large;
+}
+
+.wrapper .speakerslistwrap .speakerslist .speakercontent .speakercontentdes {
+  color: darkgrey;
+  font-weight: bold;
+}
+
+.wrapper .speakerslistwrap .speakerslist .speakercontent .speakercontentdes a {
+  text-decoration: none;
+  color: #648880;
+}
+
+/*ENDS OF WRAPPER CLASS*/
+/*FOOTER PART STARTS HERE*/
+.footer {
+  width: 80%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.footer .navlist {
+  padding: 10px 0px;
+}
+
+.footer .navlist .linklist {
+  font-family: "Source Sans Pro", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.footer .navlist .linklist a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer .navlist .linklist a:hover {
+  color: #648880;
+}
+
+/*END OF FOOTER*/
+/* START OF MEDIA QUERIES*/
+@media screen and (max-width: 1050px) {
+  .wrapper .header {
+    width: 90%;
+    margin: auto;
+    height: 300px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 200px 90px;
+        grid-template-rows: 200px 90px;
+        grid-template-areas: "staffconference date" "navlist navlist";
+  }
+  .wrapper .header * {
+    line-height: 1;
+  }
+  .wrapper .header .date {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 30px;
+  }
+  .wrapper .header .navlist {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 885px) {
+  .wrapper .header {
+    width: 100%;
+    margin: auto;
+    height: 300px;
+    display: -ms-grid;
+    display: grid;
+    text-align: center;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 200px 30px 60px;
+        grid-template-rows: 200px 30px 60px;
+        grid-template-areas: "staffconference" "date " "navlist ";
+  }
+  .wrapper .header .date {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .wrapper .part2 .intro h1 {
+    font-size: x-large;
+  }
+  .wrapper .part2 .intro p {
+    font-size: large;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .wrapper .header .staffconference {
+    font-size: 30px;
+  }
+  .wrapper .speakerslistwrap .speakerslist .speaker .speakerimg {
+    float: none;
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .wrapper .speakerslistwrap .speakerslist .speaker .speakercontent {
+    width: 100%;
+    text-align: center;
+  }
+  .footer .navlist .linklist {
+    font-size: small;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .wrapper .header {
+    height: 185px;
+    -ms-grid-rows: 80px 40px 60px;
+        grid-template-rows: 80px 40px 60px;
+  }
+  .wrapper .header .staffconference {
+    font-size: 20px;
+    padding-bottom: 2px;
+  }
+  .wrapper .header .date {
+    font-size: small;
+  }
+  .wrapper .header .navlist .linklist {
+    padding: 30px 0px;
+    font-size: small;
+  }
+  .wrapper .part2 .intro h1 {
+    padding: 5px 0px;
+  }
+  .wrapper .part2 .intro p {
+    font-size: medium;
+  }
+  .footer .navlist .linklist {
+    font-size: x-small;
+  }
+}
+/*# sourceMappingURL=conferenceWebSpeakers.css.map */

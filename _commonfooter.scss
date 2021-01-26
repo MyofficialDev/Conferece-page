@@ -1,0 +1,23 @@
+.footer {
+    width: 80%;
+    margin: auto;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    .navlist {
+        padding-top: 10px;
+        .linklist {
+            font-family: $headfont;
+            display: flex;
+            justify-content: space-around;
+            a {
+                text-decoration: none;
+                color: white;
+                &:hover {
+                    color: #648880;
+                }
+            }
+        }
+    }
+}

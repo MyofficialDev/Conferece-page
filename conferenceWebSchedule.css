@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #293f50;
+}
+
+.wrapper {
+  /*STARTS THE HEADER SECTION*/
+  /*STARTS THE PART2 SECTION*/
+}
+
+.wrapper .toplink {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
+.wrapper .header {
+  width: 80%;
+  margin: auto;
+  font-family: "Source Sans Pro", sans-serif;
+  color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 95px 95px;
+      grid-template-rows: 95px 95px;
+      grid-template-areas: "staffconference date" "staffconference navlist";
+}
+
+.wrapper .header .staffconference {
+  font-size: 40px;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: staffconference;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: normal;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.wrapper .header .date {
+  padding-right: 50px;
+  color: #648880;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: date;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: large;
+}
+
+.wrapper .header .navlist {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: navlist;
+  color: white;
+}
+
+.wrapper .header .navlist .linklist {
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.wrapper .header .navlist a {
+  color: white;
+  text-decoration: none;
+}
+
+.wrapper .header .navlist a:hover {
+  color: #648880;
+}
+
+.wrapper .part2 {
+  background: -webkit-gradient(linear, left top, right top, from(#85dabd), to(#f5eded));
+  background: linear-gradient(to right, #85dabd, #f5eded);
+  height: 200px;
+}
+
+.wrapper .part2 .intro {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.wrapper .part2 .intro h1 {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #648880;
+  font-size: 45px;
+  padding: 20px;
+}
+
+.wrapper .part2 .intro p {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: x-large;
+  font-weight: bold;
+  color: grey;
+}
+
+.scheduletable {
+  background-color: white;
+}
+
+.scheduletable .schedule {
+  width: 80%;
+  margin: auto;
+}
+
+.scheduletable .schedule table {
+  padding: 20px;
+}
+
+.scheduletable .schedule table .tablecontenthead {
+  color: #648880;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.scheduletable .schedule table .scheduledate,
+.scheduletable .schedule table .tabledatades {
+  font-weight: bold;
+  font-family: "Source Sans Pro", sans-serif;
+  color: grey;
+}
+
+.scheduletable .schedule table a {
+  text-decoration: none;
+  color: #648880;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.footer {
+  width: 80%;
+  margin: auto;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.footer .navlist {
+  padding-top: 10px;
+}
+
+.footer .navlist .linklist {
+  font-family: "Source Sans Pro", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.footer .navlist .linklist a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer .navlist .linklist a:hover {
+  color: #648880;
+}
+
+/*MEDIA QUEERY STARTS HERE*/
+@media screen and (max-width: 1050px) {
+  .wrapper .header {
+    width: 100%;
+    margin: auto;
+    height: 300px;
+    display: -ms-grid;
+    display: grid;
+    text-align: center;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 190px 30px 60px;
+        grid-template-rows: 190px 30px 60px;
+        grid-template-areas: "staffconference" "date " "navlist ";
+  }
+  .wrapper .header .date {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .wrapper .part2 .intro h1 {
+    font-size: x-large;
+  }
+  .wrapper .part2 .intro p {
+    font-size: large;
+  }
+  .scheduletable .schedule table .tablecontenthead {
+    font-size: medium;
+  }
+  .scheduletable .schedule table .scheduledate,
+  .scheduletable .schedule table .tabledatades {
+    font-size: small;
+  }
+}
+
+@media screen and (max-width: 666px) {
+  .wrapper .header .date {
+    padding: 0%;
+  }
+  .scheduletable .schedule {
+    width: 100%;
+  }
+  .scheduletable .schedule table .tablecontenthead {
+    font-size: small;
+  }
+  .scheduletable .schedule table .tabledataheading {
+    font-size: medium;
+  }
+  .scheduletable .schedule table .scheduledate,
+  .scheduletable .schedule table .tabledatades {
+    font-size: x-small;
+  }
+}
+
+@media screen and (max-width: 483px) {
+  .wrapper .header {
+    height: 185px;
+    -ms-grid-rows: 80px 40px 60px;
+        grid-template-rows: 80px 40px 60px;
+  }
+  .wrapper .header .staffconference {
+    font-size: 20px;
+    padding-top: 20px;
+  }
+  .wrapper .header .date {
+    font-size: small;
+    padding: 0%;
+  }
+  .wrapper .header .navlist .linklist {
+    padding: 30px 0px;
+    font-size: small;
+  }
+  .wrapper .part2 .intro h1 {
+    padding: 5px 0px;
+  }
+  .wrapper .part2 .intro p {
+    font-size: 15px;
+  }
+  .wrapper .scheduletable .schedule table .tablecontenthead {
+    font-size: xx-small;
+  }
+  .wrapper .scheduletable .schedule table .tabledataheading {
+    font-size: x-small;
+  }
+  .wrapper .scheduletable .schedule table .scheduledate,
+  .wrapper .scheduletable .schedule table .tabledatades {
+    font-size: 9px;
+  }
+}
+/*# sourceMappingURL=conferenceWebSchedule.css.map */

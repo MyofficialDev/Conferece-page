@@ -1,0 +1,185 @@
+$maincolor: #293f50;
+$subheadingcolor: #648880;
+$headfont: "Source Sans Pro", sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+body {
+    background-color: $maincolor;
+}
+.wrapper {
+    .toplink {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+    }
+    @import "./commonheader";
+    @import "./commonpart2";
+    .part2 {
+        .intro {
+            .introdes {
+                font-size: 100px;
+            }
+        }
+    }
+    .venuesection {
+        background-color: white;
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+        a {
+            text-decoration: none;
+            color: #648880;
+        }
+        .aboutvenue {
+            width: 80%;
+            margin: auto;
+            padding: 70px 0px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 300px 300px;
+            grid-template-areas:
+                "chicagotheater map1"
+                "fourseasons map2";
+            grid-row-gap: 30px;
+            .venueheading {
+                color: #648880;
+            }
+            .chicagotheater {
+                grid-area: chicagotheater;
+                font-family: $headfont;
+                color: grey;
+                font-weight: bold;
+                iframe {
+                    grid-area: map1;
+                }
+            }
+            .fourseasons {
+                grid-area: fourseasons;
+                font-family: $headfont;
+                color: grey;
+                font-weight: bold;
+                iframe {
+                    grid-area: map2;
+                }
+            }
+        }
+    }
+}
+.footer {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    .navlist {
+        padding: 10px 0px;
+        .linklist {
+            font-family: $headfont;
+            display: flex;
+            justify-content: space-around;
+            a {
+                text-decoration: none;
+                color: white;
+                &:hover {
+                    color: #648880;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1140px) {
+    @import "./commonmediaheader";
+    .wrapper {
+       
+        .venuesection {
+            .aboutvenue {
+                width: 80%;
+                margin: auto;
+            }
+        }
+        .venuesection .aboutvenue {
+            width: 90%;
+            margin: auto;
+        }
+    }
+}
+@media screen and (max-width: 575px) {
+    .wrapper {
+        .header {
+            text-align: center;
+            .staffconference {
+                font-size: 25px;
+            }
+            .date{
+                padding: 0%;
+            }
+        }
+        .venuesection {
+            background-color: white;
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
+            a {
+                text-decoration: none;
+                color: #648880;
+            }
+            .aboutvenue {
+                padding-top: 20px;
+                grid-template-columns: 1fr;
+                grid-template-rows: 100px 200px 100px 200px;
+                grid-template-areas:
+                    "chicagotheater"
+                    "map1"
+                    "fourseasons"
+                    "map2";
+                grid-row-gap: 30px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 430px){
+    .wrapper{
+        .header{
+            .staffconference{
+                font-size: medium;
+                padding: 0;
+            }
+            .date{
+                font-size: medium;
+                padding: 0;
+            }
+            .navlist{
+                .linklist{
+                    font-size: small;
+                }
+            }
+        }
+        .part2{
+            .intro{
+                p{
+                    font-size: small;
+                }
+            }
+        }
+        .venuesection {
+            .aboutvenue {
+                width: 100%;
+                
+            }
+        }
+    }
+    .footer{
+        .navlist{
+            .linklist{
+                font-size: x-small;
+            }
+        }
+    }
+}

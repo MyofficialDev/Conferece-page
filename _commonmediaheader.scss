@@ -1,0 +1,28 @@
+.wrapper {
+    .header {
+        width: 100%;
+        margin: auto;
+        height: 300px;
+        display: grid;
+        text-align: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 190px 30px 60px;
+        grid-template-areas:
+            "staffconference"
+            "date "
+            "navlist ";
+        .date {
+            justify-content: center;
+        }
+    }
+    .part2 {
+        .intro {
+            h1 {
+                font-size: x-large;
+            }
+            p {
+                font-size: large;
+            }
+        }
+    }
+}

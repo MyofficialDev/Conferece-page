@@ -1,0 +1,49 @@
+.header {
+    width: 80%;
+    margin: auto;
+    font-family: $headfont;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 95px 95px;
+    grid-template-areas:
+        "staffconference date"
+        "staffconference navlist";
+    .staffconference {
+        font-size: 40px;
+        grid-area: staffconference;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        line-height: normal;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+    .date {
+        padding-right: 50px;
+        color: $subheadingcolor;
+        grid-area: date;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        font-size: large;
+    }
+    .navlist {
+        grid-area: navlist;
+        color: white;
+        .linklist {
+            padding-top: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            
+        }
+        a {
+            color: white;
+            text-decoration: none;
+            &:hover {
+                color: $subheadingcolor;
+            }
+        }
+    }
+}

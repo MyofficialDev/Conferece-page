@@ -1,0 +1,229 @@
+$maincolor: #293f50;
+$subheadingcolor: #648880;
+$headfont: "Montserrat";
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    box-sizing: border-box;
+    img {
+        width: 300px;
+        height: 240px;
+        border-radius: 18px;
+    }
+}
+body {
+    background-color: $maincolor;
+}
+.wrapper {
+    width: 80%;
+    margin: auto;
+    /*FUNCTION STARTS HERE*/
+    .header {
+        font-family: $headfont;
+        color: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 100px;
+        grid-template-areas:
+            "staffconference date"
+            "staffconference navlist";
+        .staffconference {
+            font-size: xx-large;
+            grid-area: staffconference;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-bottom: 10px;
+        }
+        .date {
+            padding-right: 50px;
+            color: $subheadingcolor;
+            grid-area: date;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            font-size: large;
+        }
+        .navlist {
+            grid-area: navlist;
+            color: white;
+            .linklist {
+                padding-top: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+            }
+            a {
+                color: white;
+                text-decoration: none;
+                &:hover {
+                    color: $subheadingcolor;
+                }
+            }
+        }
+    }
+    /*HEADER  FUNCTION ENDES HERE*/
+    /*SECTION1 STARTS HERE,ABOUT THE PAGE*/
+    .section1 {
+        width: 100%;
+        height: 300px;
+        .section1head {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            h1 {
+                font-family: $headfont;
+                color: $subheadingcolor;
+            }
+            p {
+                color: white;
+                font-family: $headfont;
+                font-size: larger;
+                font-weight: lighter;
+            }
+            a {
+                text-decoration: none;
+                font-family: $headfont;
+                color: white;
+                border: 2px solid white;
+                padding: 20px;
+            }
+        }
+    }
+    /*SECTION1 ENDES HERE*/
+    /*SECTIOON 2 STARTS HERE, ABOUT FUNCTIONS*/
+    .section2 {
+        width: 100%;
+        background-color: white;
+        .section2content {
+            display: flex;
+            .section2list {
+               
+                height: auto;
+                padding: 20px;
+            }
+        }
+    }
+    .functionhead {
+        color: #648880;
+        font-family: $headfont;
+        text-align: center;
+    }
+    .imglink {
+        text-align: center;
+        a {
+            text-decoration: none;
+            color: $subheadingcolor;
+            font-family: $headfont;
+        }
+    }
+    .about {
+        font-family: $headfont;
+        font-weight: bold;
+        text-align: center;
+    }
+    /*SPEAKERS LIST ENDES HERE*/
+    /*FOOTER SECTION STARTS HERE*/
+    .footer {
+        text-align: center;
+        .navlist {
+            width: 100%;
+            .linklist {
+                display: flex;
+                justify-content: space-around;
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-family: $headfont;
+                    &:hover {
+                        color: #648880;
+                    }
+                }
+            }
+        }
+    }
+}
+/*MEDIA QUERIES FOR HOME PAGE*/
+@media screen and (max-width: 1700px) {
+    .wrapper {
+        width: 90%;
+        margin: auto;
+        img {
+            width: 250px;
+            height: 200px;
+        }
+    }
+}
+@media screen and (max-width: 950px) {
+    .wrapper {
+        width: 100%;
+        img {
+            width: 100%;
+            height: 140px;
+        }
+        .header {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 100px 40px 30px;
+            grid-template-areas:
+                "staffconference"
+                "date"
+                "navlist";
+            grid-row-gap: 20px;
+            .staffconference {
+                font-size: x-large;
+                text-align: center;
+                justify-content: center;
+                padding-top: 60px;
+                padding-bottom: 10px;
+            }
+            .date {
+                padding-top: 40px;
+                justify-content: center;
+                align-items: center;
+                font-size: medium;
+            }
+            .linklist {
+                padding-top: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+        }
+    }
+    .section1head {
+        padding-top: 40px;
+    }
+    .section1 {
+        height: 350px;
+    }
+}
+@media screen and (max-width: 650px) {
+    #section1 {
+        font-size: large;
+    }
+    #section1des {
+        font-size: small;
+        font-weight: bold;
+    }
+    .section2{
+        width: 100%;
+        .section2content{
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            .section2list{
+                width: 100%;
+                padding: 0;
+                img{
+                    width: 90%;
+                    max-width: 400px;
+        
+                }
+            }
+        }
+    }
+    
+}
+

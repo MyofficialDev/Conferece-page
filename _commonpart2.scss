@@ -1,0 +1,21 @@
+.part2 {
+    background: linear-gradient(to right, rgb(133, 218, 189), rgb(245, 237, 237));
+    height: 200px;
+    .intro {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        h1 {
+            font-family: $headfont;
+            color: $subheadingcolor;
+            font-size: 45px;
+            padding: 20px;
+        }
+        p {
+            font-family: $headfont;
+            font-size: x-large;
+            font-weight: bold;
+            color: grey;
+        }
+    }
+}

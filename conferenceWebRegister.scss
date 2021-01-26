@@ -1,0 +1,212 @@
+$maincolor: #293f50;
+$subheadingcolor: #648880;
+$headfont: "Source Sans Pro", sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+body {
+    background-color: $maincolor;
+}
+.wrapper {
+    .toplink {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+    }
+    @import "./commonheader";
+    @import "./commonpart2";
+    .registration {
+        background-color: white;
+        .registrationcontent {
+            position: relative;
+            width: 80%;
+            margin: auto;
+            .aboutandwhy {
+                padding: 40px 0px;
+                width: 60%;
+                font-family: $headfont;
+                h2 {
+                    color: $subheadingcolor;
+                }
+                h3 {
+                    color: grey;
+                }
+                p {
+                    font-weight: bold;
+                    font-size: larger;
+                    color: darkgray;
+                }
+                .why {
+                    .whylist {
+                        color: darkgray;
+                        ul {
+                            margin-left: 30px;
+                        }
+                        li {
+                            font-weight: bold;
+                            font-size: larger;
+                        }
+                    }
+                }
+            }
+            .registrationform {
+                padding: 30px 0px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                form {
+                    label {
+                        color: $subheadingcolor;
+                        font-family: $headfont;
+                        font-weight: bold;
+                    }
+                    input {
+                        font-family: $headfont;
+                        color: grey;
+                        line-height: 30px;
+                        border-radius: 5px;
+                        width: 300px;
+                    }
+
+                    select {
+                        padding: 5px;
+                        width: 70px;
+                        border-radius: 5px;
+                    }
+                    #submit {
+                        width: 130px;
+                        color: white;
+                        line-height: 35px;
+                        background-color: #648880;
+                    }
+                }
+            }
+        }
+    }
+}
+@import "./commonfooter";
+
+@media screen and (max-width: 1158px) {
+    @import "./commonmediaheader";
+    .wrapper {
+        .part2 {
+            .intro {
+                p {
+                    font-size: large;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 968px) {
+    .wrapper {
+        .registration {
+            .registrationcontent {
+                .aboutandwhy {
+                    width: 100%;
+                    text-align: center;
+                }
+                .registrationform {
+                    text-align: center;
+                    position: static;
+                    input {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 560px) {
+    .wrapper {
+        .header {
+            .staffconference {
+                font-size: x-large;
+            }
+        }
+        .part2 {
+            .intro {
+                p {
+                    font-size: medium;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 445px) {
+    * {
+        li {
+            font-size: small;
+        }
+    }
+    .wrapper {
+        .toplink {
+            .bookmark {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        .header {
+            text-align: center;
+            .staffconference {
+                font-size: 20px;
+            }
+            .date {
+                padding: 0%;
+                font-size: medium;
+            }
+        }
+        .registration {
+            .registrationcontent {
+                .registrationform {
+                    form {
+                        input {
+                            width: 200px;
+                        }
+                        textarea {
+                            width: 200px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 330px) {
+    *{
+        li{
+            font-size: 10px;
+        }
+    }
+    .wrapper {
+        .header{
+            grid-template-rows: 100px 30px 30px;
+            height: 190px;
+            .staffconference{
+                padding: 0;
+            }
+            .date{
+                padding: 50px 0;
+            }
+            .navlist{
+                padding: 0;
+            }
+        }
+        .part2 {
+            .intro {
+                h1 {
+                    padding: 0%;
+                    padding-top: 10px;
+                }
+                p {
+                    padding: 0;
+                    font-size: medium;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,143 @@
+$maincolor: #293f50;
+$subheadingcolor: #648880;
+$headfont: "Source Sans Pro", sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    background-color: $maincolor;
+}
+.wrapper {
+    .toplink {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+    }
+    /*STARTS THE HEADER SECTION*/
+    @import "./commonheader";
+    /*STARTS THE PART2 SECTION*/
+    @import "./commonpart2";
+}
+.scheduletable {
+    background-color: white;
+    .schedule {
+        width: 80%;
+        margin: auto;
+        table {
+            padding: 20px;
+
+            .tablecontenthead {
+                color: $subheadingcolor;
+                font-family: $headfont;
+            }
+            .scheduledate,
+            .tabledatades {
+                font-weight: bold;
+                font-family: $headfont;
+                color: grey;
+            }
+            a {
+                text-decoration: none;
+                color: $subheadingcolor;
+                font-family: $headfont;
+            }
+        }
+    }
+}
+@import "./commonfooter";
+/*MEDIA QUEERY STARTS HERE*/
+@media screen and (max-width: 1050px) {
+    @import "./commonmediaheader";
+    .scheduletable {
+        .schedule {
+           
+            table {
+                .tablecontenthead {
+                    font-size: medium;
+                }
+                .scheduledate,
+                .tabledatades {
+                    font-size: small;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 666px) {
+    .wrapper{
+        .header{
+            .date{
+                padding: 0%;
+            }
+        }
+    }
+    .scheduletable {
+        .schedule {
+            width: 100%;
+            table {
+                .tablecontenthead {
+                    font-size: small;
+                }
+                .tabledataheading {
+                    font-size: medium;
+                }
+                .scheduledate,
+                .tabledatades {
+                    font-size: x-small;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 483px) {
+    .wrapper {
+        .header {
+            height: 185px;
+            grid-template-rows: 80px 40px 60px;
+            .staffconference {
+                font-size: 20px;
+                padding-top: 20px;
+            }
+            .date {
+                font-size: small;
+                padding: 0%;
+            }
+            .navlist {
+                .linklist {
+                    padding: 30px 0px;
+                    font-size: small;
+                }
+            }
+        }
+        .part2 {
+            .intro {     
+                h1{
+                    padding: 5px 0px;
+                }
+                p{
+                    font-size: 15px;
+                }
+            }
+        }
+        .scheduletable {
+            .schedule {
+                table {
+                    .tablecontenthead {
+                        font-size: xx-small;
+                    }
+                    .tabledataheading {
+                        font-size: x-small;
+                    }
+                    .scheduledate,
+                    .tabledatades {
+                        font-size: 9px;
+                    }
+                }
+            }
+        }
+    }
+}

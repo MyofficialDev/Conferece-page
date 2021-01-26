@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* img {
+  width: 300px;
+  height: 240px;
+  border-radius: 18px;
+}
+
+body {
+  background-color: #293f50;
+}
+
+.wrapper {
+  width: 80%;
+  margin: auto;
+  /*FUNCTION STARTS HERE*/
+  /*HEADER  FUNCTION ENDES HERE*/
+  /*SECTION1 STARTS HERE,ABOUT THE PAGE*/
+  /*SECTION1 ENDES HERE*/
+  /*SECTIOON 2 STARTS HERE, ABOUT FUNCTIONS*/
+  /*SPEAKERS LIST ENDES HERE*/
+  /*FOOTER SECTION STARTS HERE*/
+}
+
+.wrapper .header {
+  font-family: "Montserrat";
+  color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 100px 100px;
+      grid-template-rows: 100px 100px;
+      grid-template-areas: "staffconference date" "staffconference navlist";
+}
+
+.wrapper .header .staffconference {
+  font-size: xx-large;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: staffconference;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 10px;
+}
+
+.wrapper .header .date {
+  padding-right: 50px;
+  color: #648880;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: date;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: large;
+}
+
+.wrapper .header .navlist {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: navlist;
+  color: white;
+}
+
+.wrapper .header .navlist .linklist {
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.wrapper .header .navlist a {
+  color: white;
+  text-decoration: none;
+}
+
+.wrapper .header .navlist a:hover {
+  color: #648880;
+}
+
+.wrapper .section1 {
+  width: 100%;
+  height: 300px;
+}
+
+.wrapper .section1 .section1head {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.wrapper .section1 .section1head h1 {
+  font-family: "Montserrat";
+  color: #648880;
+}
+
+.wrapper .section1 .section1head p {
+  color: white;
+  font-family: "Montserrat";
+  font-size: larger;
+  font-weight: lighter;
+}
+
+.wrapper .section1 .section1head a {
+  text-decoration: none;
+  font-family: "Montserrat";
+  color: white;
+  border: 2px solid white;
+  padding: 20px;
+}
+
+.wrapper .section2 {
+  width: 100%;
+  background-color: white;
+}
+
+.wrapper .section2 .section2content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper .section2 .section2content .section2list {
+  height: auto;
+  padding: 20px;
+}
+
+.wrapper .functionhead {
+  color: #648880;
+  font-family: "Montserrat";
+  text-align: center;
+}
+
+.wrapper .imglink {
+  text-align: center;
+}
+
+.wrapper .imglink a {
+  text-decoration: none;
+  color: #648880;
+  font-family: "Montserrat";
+}
+
+.wrapper .about {
+  font-family: "Montserrat";
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper .footer {
+  text-align: center;
+}
+
+.wrapper .footer .navlist {
+  width: 100%;
+}
+
+.wrapper .footer .navlist .linklist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.wrapper .footer .navlist .linklist a {
+  text-decoration: none;
+  color: white;
+  font-family: "Montserrat";
+}
+
+.wrapper .footer .navlist .linklist a:hover {
+  color: #648880;
+}
+
+/*MEDIA QUERIES FOR HOME PAGE*/
+@media screen and (max-width: 1700px) {
+  .wrapper {
+    width: 90%;
+    margin: auto;
+  }
+  .wrapper img {
+    width: 250px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .wrapper {
+    width: 100%;
+  }
+  .wrapper img {
+    width: 100%;
+    height: 140px;
+  }
+  .wrapper .header {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 100px 40px 30px;
+        grid-template-rows: 100px 40px 30px;
+        grid-template-areas: "staffconference" "date" "navlist";
+    grid-row-gap: 20px;
+  }
+  .wrapper .header .staffconference {
+    font-size: x-large;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 60px;
+    padding-bottom: 10px;
+  }
+  .wrapper .header .date {
+    padding-top: 40px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: medium;
+  }
+  .wrapper .header .linklist {
+    padding-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .section1head {
+    padding-top: 40px;
+  }
+  .section1 {
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #section1 {
+    font-size: large;
+  }
+  #section1des {
+    font-size: small;
+    font-weight: bold;
+  }
+  .section2 {
+    width: 100%;
+  }
+  .section2 .section2content {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .section2 .section2content .section2list {
+    width: 100%;
+    padding: 0;
+  }
+  .section2 .section2content .section2list img {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+/*# sourceMappingURL=conferenceWebHome.css.map */

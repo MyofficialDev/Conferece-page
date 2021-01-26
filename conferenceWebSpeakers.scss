@@ -1,0 +1,254 @@
+$maincolor: #293f50;
+$subheadingcolor: #648880;
+$headfont: "Source Sans Pro", sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.bookmark {
+    width: 50px;
+    height: 50px;
+}
+body {
+    background-color: #293f50;
+}
+.wrapper {
+    .toplink {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+    }
+    /*FUNCTION STARTS HERE*/
+    /*HEAD SECTION*/
+    @import "./commonheader";
+    /*START OF ABOUT SPEAKER*/
+    .part2 {
+        background: linear-gradient(to right, rgb(133, 218, 189), rgb(245, 237, 237));
+        height: 200px;
+        .intro {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            h1 {
+                font-family: $headfont;
+                color: $subheadingcolor;
+                font-size: 45px;
+                padding: 20px;
+            }
+            p {
+                font-family: $headfont;
+                font-size: x-large;
+                font-weight: bold;
+                color: grey;
+            }
+        }
+    }
+    /*END OF ABOUT SPEAKER*/
+    /*START OF SPEAKERLIST*/
+    .speakerslistwrap {
+        background-color: white;
+        padding-bottom: 20px;
+        .speakerslist {
+            padding-top: 30px;
+            width: 80%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            .speaker {
+                padding-top: 30px;
+            }
+            .speakerimg {
+                float: right;
+                padding-right: 60px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                a {
+                    text-decoration: none;
+                    color: #648880;
+                    font-weight: bold;
+                }
+            }
+            .speakercontent {
+                width: 70%;
+                font-family: $headfont;
+                h1 {
+                    font-family: $headfont;
+                    color: #648880;
+                    font-size: xx-large;
+                }
+                .speakercontentdes {
+                    color: darkgrey;
+                    font-weight: bold;
+                    a {
+                        text-decoration: none;
+                        color: $subheadingcolor;
+                    }
+                }
+            }
+        }
+    }
+}
+/*ENDS OF WRAPPER CLASS*/
+/*FOOTER PART STARTS HERE*/
+.footer {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    .navlist {
+        padding: 10px 0px;
+        .linklist {
+            font-family: $headfont;
+            display: flex;
+            justify-content: space-around;
+            a {
+                text-decoration: none;
+                color: white;
+                &:hover {
+                    color: #648880;
+                }
+            }
+        }
+    }
+}
+/*END OF FOOTER*/
+/* START OF MEDIA QUERIES*/
+@media screen and (max-width: 1050px) {
+    .wrapper {
+        .header {
+            * {
+                line-height: 1;
+            }
+            width: 90%;
+            margin: auto;
+            height: 300px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 200px 90px;
+            grid-template-areas:
+                "staffconference date"
+                "navlist navlist";
+            .date {
+                justify-content: center;
+                padding-left: 30px;
+            }
+            .navlist {
+                justify-content: space-around;
+                align-items: flex-start;
+            }
+        }
+    }
+}
+@media screen and (max-width: 885px) {
+    .wrapper {
+        .header {
+            width: 100%;
+            margin: auto;
+            height: 300px;
+            display: grid;
+            text-align: center;
+            grid-template-columns: 1fr;
+            grid-template-rows: 200px 30px 60px;
+            grid-template-areas:
+                "staffconference"
+                "date "
+                "navlist ";
+            .date {
+                justify-content: center;
+            }
+        }
+        .part2 {
+            .intro {
+                h1 {
+                    font-size: x-large;
+                }
+                p {
+                    font-size: large;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 470px) {
+    .wrapper {
+        .header {
+            .staffconference {
+                font-size: 30px;
+            }
+        }
+        .speakerslistwrap {
+            .speakerslist {
+                .speaker {
+                    .speakerimg {
+                        float: none;
+                        margin: 0;
+                        padding: 0;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                    }
+                    .speakercontent {
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    .footer{
+        .navlist{
+            .linklist{
+                font-size: small;
+            }
+        }
+    }
+}
+@media screen and (max-width: 350px) {
+    .wrapper {
+        .header {
+            height: 185px;
+            grid-template-rows: 80px 40px 60px;
+            .staffconference {
+                font-size: 20px;
+                padding-bottom: 2px;
+            }
+            .date {
+                font-size: small;
+            }
+            .navlist {
+                .linklist {
+                    padding: 30px 0px;
+                    font-size: small;
+                }
+            }
+        }
+        .part2 {
+            .intro {     
+                h1{
+                    padding: 5px 0px;
+                }
+                p{
+                    font-size: medium;
+                }
+            }
+        }
+    }
+    .footer{
+        .navlist{
+            .linklist{
+                font-size: x-small;
+            }
+        }
+    }
+}
